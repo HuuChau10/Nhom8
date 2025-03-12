@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cá Nhân</title>
+    <link rel="stylesheet" href="../style/Ky.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="../img/MThuan.png" alt="Ảnh đại diện">
+        <h1>Chào mừng đến với Website của Tôi</h1>
+        <p>Tôi là Phan Hoang Minh Thuan, một lập trình viên đam mê công nghệ.</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('about')">Giới thiệu</a></li>
+            <li><a href="#" onclick="showSection('projects')">Dự án</a></li>
+            <li><a href="#" onclick="showSection('events')">Sự kiện</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about" style="display: none;">
+        <h2>Về Tôi</h2>
+        <p>Tôi có kinh nghiệm trong lĩnh vực phát triển web, đặc biệt là front-end development.</p>
+    </section>
+    
+    <section id="projects" style="display: none;">
+        <h2>Dự Án</h2>
+        <p>Dưới đây là một số dự án tôi đã thực hiện:</p>
+        <ul>
+            <li>Dự án 1: Website thương mại điện tử</li>
+            <li>Dự án 2: Ứng dụng quản lý công việc</li>
+            <li>Dự án 3: Hệ thống AI phát hiện té ngã</li>
+        </ul>
+    </section>
+    
+    <section id="events" style="display: none;">
+        <h2>Sự Kiện</h2>
+        <div class="event-gallery">
+            <img src="event1.jpg" alt="Sự kiện 1">
+            <img src="event2.jpg" alt="Sự kiện 2">
+            <img src="event3.jpg" alt="Sự kiện 3">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Phan Hoang Minh Thuan. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
