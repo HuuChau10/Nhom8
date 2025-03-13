@@ -3,15 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Cá Nhân</title>
-    <link rel="stylesheet" href="../style/Ky.css">
+    <title>Nguyễn Hoàng Kỳ - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #333;
+            --bg-color: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 1rem auto;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .role {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #e2e8f0;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 50px;
+            margin: 1rem auto;
+            display: inline-block;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            background: #e2e8f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
+            <img src="../img/avt.jpg" alt="Nguyễn Hoàng Kỳ">
             <h1>Nguyễn Hoàng Kỳ</h1>
-            <img src="../img/avt.jpg" alt="Ảnh cá nhân của tôi">
-            <p>Software Engineer</p>
+            <p class="role">Software Engineer | Web Developer</p>
             <nav>
                 <ul>
                     <li><a href="#about">Giới thiệu</a></li>
@@ -24,27 +236,71 @@
     
     <section id="about" class="container">
         <h2>Về tôi</h2>
-        <p>Là sinh viên năm 4 của trường đại học HUTECH, với niềm đam mê mãnh liệt với lập trình.</p>
+        <div class="about-content">
+            <div>
+                <p>Xin chào! Tôi là sinh viên năm 4 tại trường đại học HUTECH, chuyên ngành Công nghệ phần mềm. Với niềm đam mê mãnh liệt về lập trình và phát triển phần mềm, tôi luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân.</p>
+                <p>Tôi có kinh nghiệm làm việc với nhiều công nghệ web hiện đại và luôn cập nhật những xu hướng mới nhất trong ngành.</p>
+            </div>
+            <div>
+                <h3>Kỹ năng chuyên môn:</h3>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">SQL</span>
+        </div>
+            </div>
+        </div>
     </section>
     
     <section id="portfolio" class="container">
         <h2>Dự án tiêu biểu</h2>
         <div class="projects">
             <div class="project">
-                <h3>Dự án 1</h3>
-                <p>Mô tả về dự án.</p>
+                <h3>E-commerce Platform</h3>
+                <p>Xây dựng website thương mại điện tử với đầy đủ tính năng mua bán, quản lý sản phẩm và thanh toán trực tuyến.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
             </div>
             <div class="project">
-                <h3>Dự án 2</h3>
-                <p>Mô tả về dự án.</p>
+                <h3>Task Management System</h3>
+                <p>Phát triển hệ thống quản lý công việc cho doanh nghiệp với tính năng phân công, theo dõi và báo cáo tiến độ.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Social Media Dashboard</h3>
+                <p>Thiết kế dashboard phân tích dữ liệu mạng xã hội với các biểu đồ trực quan và báo cáo chi tiết.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                </div>
             </div>
         </div>
     </section>
     
     <section id="contact" class="container">
         <h2>Liên hệ</h2>
-        <p>Email: ky.dev@yahoo.com</p>
-        <p>Github: <a href="https://www.google.com.vn/">Link</a></p>
+        <div class="contact-info">
+            <p>Tôi luôn sẵn sàng tham gia vào các dự án thú vị và cơ hội hợp tác mới.</p>
+            <p>Email: ky.dev@yahoo.com</p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </section>
     
     <footer>
